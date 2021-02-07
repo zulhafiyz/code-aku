@@ -1,0 +1,43 @@
+#include <iostream> 
+using namespace std; 
+  
+// XOR Function 
+ 
+string xor_logic(string p, string d, int n)
+
+{ 
+
+string xor_out; 
+
+ for (int i = 0; i < n; i++) 
+    { 
+  
+        if (p[i] == d[i])    //if 2 binary digits are the same, the outcome will be 0
+            xor_out += "0"; 
+        else
+            xor_out += "1";   //if 2 binary digits are different, the outcome will be 1
+    } 
+    return xor_out;
+}
+
+
+int main() 
+{ 
+
+string p;
+string d;
+
+	cout<<"PN  :";  
+	cout<<endl;
+    cin >> p;            //input PN binary
+	cout<<endl;
+	  
+    cout<<"DATA:";
+    cout<<endl;
+    cin >> d;           //input data binary 
+    cout<<endl;
+    
+    int n = p.length(); 
+    string c = xor_logic(p, d, n); 
+    cout<<"XOR :"<<endl << c << endl; 
+} 
